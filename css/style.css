@@ -1,0 +1,102 @@
+.col-md-12 {
+    height: 15%;
+   /*background-image: url("images/localsaver-logo.png");*/
+}
+
+#locationButton {
+	/*center button*/
+}
+
+#image2 {
+	/*position: absolute;*/
+
+	border-radius: 10px;
+	width: 92%;
+	height: 175px;
+	background-color: lightblue;
+}
+
+#test {
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!fix this!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+	background-image: url("images/localsaver-logo.png");
+	background-repeat: no-repeat; 
+}
+
+#profileImage {
+	
+	width: 75px;
+	height: 75px;
+	background-color: gray;
+	float: left;
+	left: 7%;
+	bottom: 50px;
+
+}
+
+#category-nutrition {
+	text-align: center;
+	padding-right: 30%;
+}
+
+#table {
+	width: 50px;
+	padding: 50px;
+}
+
+#button1 {
+	/*position: absolute;*/
+
+	border-radius: 5px;
+	width: 92%;
+	height: 70px;
+	background-color: grey;
+}
+
+.container {
+	padding-top: 18px;
+}
+
+#cityState {
+	text-align: left;
+}
+
+#miles {
+
+	text-align: right;
+}
+
+.text-muted {
+	text-align: center;
+	padding-bottom: 7px;
+}
+
+#miles, #cityState {
+	position: absolute;
+	left: 4%;
+	right: 4%;
+    border-radius: 10px;
+    border: 1px solid #868788;
+    padding: 5px; 
+    width: 92%;
+    height: 470px; 
+    /*background-image: url("images/tile1-main.jpg");
+    background-repeat: no-repeat; */
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
