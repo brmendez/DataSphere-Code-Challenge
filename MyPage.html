@@ -12,79 +12,36 @@
 
 <Title>DataSphere</Title>
 
-<!-- BOOTSTRAP! -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<!-- END BOOTSTRAP! -->
-
 <link rel="stylesheet" type="text/css" href="css/style.css">
  
 </Head>
 <Body>
-
-	<div class="container-fluid">
-
-		<div class="row">
-
-			<div class="col-md-12" id="test" style="background-color: #097AB3"></div>
-
-		</div>
-			<h4 class="text-center">DataSphere Code Challenge</h4>
-			<h1 class="text-center">Coupons & Deals near You</h1>	
-			<p class="text-muted">+3,600 MATCHES FOUND</p>
-
-<button type="button" id="locationButton" class="btn btn-primary" onclick="getLocation()">Share Location</button>
-			<!-- <button onclick="getLocation()">Share your location</button> -->
-
-<p id="demo"></p>
 	
-		</div>
+	<header class="mainHeader" role="banner">
+	    <img id="mainLogo" src="images/localsaver-logo.png" height="40" width="200">
+	</header> <!-- END Main Header! -->
 
-		 <div>
-		 	<p id="cityState"> <img src="images/pin.png"> Bellevue, WA </p>
-		 	<p id="miles">3.3 mi</p>
-		 </div>
+	<h1 id="couponsText">Coupons & Deals near You</h1>
+	<p id="matchesFound">+valueHere + ' Matches Found'</p>
 
-		<div id="image2">
-		
-		</div>
-
-	<div>
-		<div class="col-md-4" id="profileImage" style="background-color: pink">profile image</div>
-		<p id="category-nutrition">nutritionist</p>
-	</div>
+	<div id="primaryContentBox">
 	
-	<div id="button1">
+	<img id="pin" src="images/pin.png" height="12" width="9"> City, ST
+		<p id="distance">X.Y mi</p>
 
- <!-- <img src="images/tile1-main.jpg"> -->
+	<img id="foodBackground" src="images/tile1-main.jpg">
 	
-	</div>
-
-	<div class="container"> 
-
-		<table class="table">
-			<tbody>
-				<tr>
-					<td>20% off</td>
-				</tr>
-				<tr>
-					<td>Refer a friend</td>
-				</tr>
-			</tbody>
-		</table>
-
-	</div> 
-
-
+	<img id="profileImage" src="images/tile1-logo.jpg" height="100" width="100"> <p id="coCategory">Company Category</p>
 	
+	<p id="companyButtonTitle">companyButtonTitle</p>
+
+		<p id="discoutButton">20% off Regular Price for ...</p>
+
+
+
+	</div> <!-- END PRIMARY CONTENT DIV -->
+
+
 
 </Body>
 </Html>
