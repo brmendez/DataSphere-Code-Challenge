@@ -34,7 +34,6 @@ else {
   console.log('Geolocation is not supported for this Browser/OS version yet.');
 }
 
-
 var x = document.getElementById("demo");
 
 function showPosition(position) {
