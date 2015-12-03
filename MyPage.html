@@ -7,7 +7,11 @@
 <Meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- JQUERY -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- END JQUERY -->
 <script src="js/my_scripts.js"></script>
+
 
 
 <Title>DataSphere</Title>
@@ -23,11 +27,11 @@
 	</header> <!-- END Main Header! -->
 
 	<h1 id="couponsText">Coupons & Deals near You</h1>
-	<p id="matchesFound">+valueHere + ' Matches Found'</p>
+	<p id="matchesFound">+valueHere Matches Found</p>
 
 	<div id="primaryContentBox">
 	
-		<img id="pin" src="images/pin.png" height="12" width="9"> City, ST
+		<img id="pin" src="images/pin.png" height="12" width="9"> <p id="city">City</p>
 			<p id="distance">X.Y mi</p>
 
 		<img id="foodBackground" src="images/tile1-main.jpg">
@@ -36,9 +40,86 @@
 		
 		<p id="companyButtonTitle">companyButtonTitle</p>
 
-		<p id="discoutButton">20% off Regular Price for ...</p>
+		<p id="discountButton"><!-- &nbsp &nbsp 20% off Regular Price for	... --> </p>
 
 	</div> <!-- END PRIMARY CONTENT DIV -->
 
+
+<script>
+
+	var xmlhttp = new XMLHttpRequest();
+	var url = "mock.json";
+
+	xmlhttp.onreadystatechange = function() {
+	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	        var myArr = JSON.parse(xmlhttp.responseText);
+	        myFunction(myArr);
+	    }
+	};
+
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+
+	function myFunction(arr) {
+	    var out = "";
+	    var i;
+	    for(i = 0; i < arr.businesses.length - 1; i++) {
+	        out += '<a href="' + arr.businesses[i].businessname + '">' + 
+	        arr[i] + '</a><br>';
+
+	        // document.getElementById("p1").innerHTML = "New text!";
+
+	        // $( this ).text(arr.businesses[i].businessname);
+
+	        $( "#matchesFound" ).text( arr.count );
+	        $( "#discountButton" ).text( arr.businesses[1].coupons[0].title );
+	        $( "#companyButtonTitle" ).text( arr.businesses[0].businessname );
+	        $( "#coCategory" ).text( arr.businesses[0].category );
+	        $( "#city" ).text( arr.businesses[0].city );
+	        $( "#distance" ).text( arr.businesses[0].distance );
+				  // var htmlString = $( this ).html();
+				  // $( this ).text( "Clicked!!" );
+	
+			};
+	    }
+	
+	
+	
+
+</script>
+
+
+
+
 </Body>
 </Html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- $( "#discountButton" ).text(function() {
+
+	        	$( this ).text( arr.businesses[0].businessname );
+				  // var htmlString = $( this ).html();
+				  // $( this ).text( "Clicked!!" );
+	
+			}); -->
